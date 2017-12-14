@@ -21,7 +21,7 @@ For me the command was:
 		
 **Usage:**
 
-		$sh baseline.sh myfile.xml
+		$bash baseline.sh myfile.xml
 		
 **old output:**
 

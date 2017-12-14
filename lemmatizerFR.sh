@@ -32,5 +32,9 @@
 #########################################################
 
 outputFile=$(basename $1 | cut -f 1 -d '.').lem.xml
+echo "" > $outputFile
 #in order to avoid the <unknown> add the option  tag -no-unknown inside the "tree-tagger-french-utf8" file in your TreeTagger folder
 cat $1 | while read in; do if [[ "$in" == *"lemma"* ]] ; then echo -n "<lemma>" >> $outputFile & echo -n $in | cut -d ">" -f2 | cut -d "<" -f1 | tree-tagger-french-utf8 | cut -f3 | awk '{printf $0}' >> $outputFile && echo "</lemma>" >> $outputFile; else echo $in >>$outputFile; fi;done; 
+cat $outputFile | tr -d '\015' > temp
+cat temp > $outputFile
+rm temp

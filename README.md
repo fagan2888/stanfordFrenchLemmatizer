@@ -48,7 +48,7 @@ Since it lemmatizes words one by one the performance might be lower than usual a
 
 **Contact**
 
-Marie Dubremetz. firstname.lastname@lingfil.uu.se
+Marie Dubremetz. firstname@stp.lingfil.uu.se
 
 **Licence**
 
